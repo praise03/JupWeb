@@ -6,6 +6,7 @@ const progress = document.getElementById('progress')
 const viewResult = document.getElementById('view-results')
 const resultContainer = document.getElementById('results-container')
 const footer = document.getElementById('footer')
+const footer2 = document.getElementById('footer2')
 
 
 let currentQuestionIndex = 0;
@@ -43,7 +44,8 @@ let selectedAnswers = [];
 
 function reloadFooter() {
     footer.classList.add('hidden');
-    footer.classList.remove('hidden');
+    footer2.classList.remove('hidden');
+
 }
 
 function startQuiz() {
