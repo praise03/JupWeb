@@ -5,8 +5,6 @@ const questionContainerElement = document.getElementById('quiz-questions');
 const progress = document.getElementById('progress')
 const viewResult = document.getElementById('view-results')
 const resultContainer = document.getElementById('results-container')
-const footer = document.getElementById('footer')
-const footer2 = document.getElementById('footer2')
 
 
 let currentQuestionIndex = 0;
@@ -42,19 +40,12 @@ startButton.addEventListener('click', startQuiz);
 let correctAnswers = 0;
 let selectedAnswers = [];
 
-function reloadFooter() {
-    footer.classList.add('hidden');
-    footer2.classList.remove('hidden');
-
-}
-
 function startQuiz() {
       startButton.classList.add('hidden');
     //   shuffledQuestions = questions.sort(() => Math.random() - .5);
       currentQuestionIndex = 0;
       questionContainerElement.classList.remove('hidden');
       displayQuestion();
-      reloadFooter();
 }
 
 function displayQuestion() {
@@ -171,7 +162,6 @@ function compareAnswers() {
                                 Correct Answer: <span class="text-green-900 font-bold">${questions[index].answers.find(a => a.correct).text}</span>`;
         resultsElement.appendChild(resultItem);
     });
-    reloadFooter()
 }
 
 
