@@ -30,7 +30,7 @@ const circleBar = new ProgressBar.SemiCircle("#progress-bar", {
       },
   });
 
-  circleBar.animate(1/5, {
+  circleBar.animate(1/15, {
     duration: 50
   });
 
@@ -113,14 +113,14 @@ function previousQuestion() {
 
 nextButton.addEventListener('click', () => {
     nextQuestion();
-    circleBar.animate((currentQuestionIndex+1)/5, {
+    circleBar.animate((currentQuestionIndex+1)/15, {
         duration: 50
       });
 });
 
 previousButton.addEventListener('click', () => {
     if (currentQuestionIndex > 0) {
-        circleBar.animate((currentQuestionIndex-1)/5, {
+        circleBar.animate((currentQuestionIndex-1)/15, {
             duration: 50
         })   
     };
@@ -170,10 +170,10 @@ const questions = [
     {
         question: 'What Year Was Jupiter Exchange Founded?',
         answers: [
-            { text: '2011', correct: false },
+            { text: '2019', correct: false },
             { text: '1665', correct: false },
-            { text: '2019', correct: true },
-            { text: '2018', correct: false }
+            { text: '2021', correct: true },
+            { text: '2022', correct: false }
         ]
     },
     {
@@ -188,29 +188,118 @@ const questions = [
     {
         question: 'In 2024 how many weekly planetary calls have been hosted?',
         answers: [
-            { text: '11', correct: false },
+            { text: '30', correct: false },
             { text: '32', correct: true },
-            { text: '50', correct: false },
-            { text: '44', correct: false }
+            { text: '29', correct: false },
+            { text: '1', correct: false }
         ]
     }
     ,
     {
-        question: 'How many Jupiter products have been launched since 2023?',
+        question: 'What is the current circulating supply of $JUP tokens',
         answers: [
-            { text: '1', correct: false },
-            { text: '2', correct: true },
-            { text: '5', correct: false },
-            { text: '4', correct: false }
+            { text: '100 Million', correct: false },
+            { text: '1 Billion', correct: false },
+            { text: '900 Million', correct: false },
+            { text: '1.35 Billion', correct: true }
         ]
     },
     {
-        question: 'What is the minimum amount of JUP staked to qualify for POAPs',
+        question: "What is the current minimum threshold for a DAO vote to be considered valid",
         answers: [
-            { text: '5', correct: false },
+            { text: '60 Million Votes', correct: false },
+            { text: '120 Million Votes', correct: false },
+            { text: '30% of Total Staked Jup', correct: true },
+            { text: 'Meow makes all the calls', correct: false }
+        ]
+    }
+    ,
+    {
+        question: "Which of these tokens did not launch on the LFG Launchpad",
+        answers: [
+            { text: '$DBR', correct: false },
+            { text: '$CLOUD', correct: false },
+            { text: '$WEN', correct: false },
+            { text: '$W', correct: true }
+        ]
+    },
+    {
+        question: "What is the current ATH of $JUP",
+        answers: [
+            { text: '$2.00', correct: true },
+            { text: '$2.30', correct: false },
+            { text: '$1.98', correct: false },
+            { text: '$67,024', correct: false }
+        ]
+    },
+    {
+        question: "What of these is NOT a product made by Jupiter Team",
+        answers: [
+            { text: 'Jup FOX', correct: false },
+            { text: 'Jupiter Lock', correct: false },
+            { text: 'Jup Pro', correct: true },
+            { text: 'Jupiter Perps', correct: false }
+        ]
+    },
+    {
+        question: "What is the minumum amount of staked $JUP required to claim Planetaty Call POAPs",
+        answers: [
             { text: '50', correct: true },
-            { text: '30', correct: false },
-            { text: '20', correct: false }
+            { text: '1000', correct: false },
+            { text: '60', correct: false },
+            { text: '100', correct: false }
+        ]
+    },
+    {
+        question: "What animal is commonly used to represent members of the Jup Ecosystem",
+        answers: [
+            { text: 'Unicorn', correct: false },
+            { text: 'Cats', correct: true },
+            { text: 'Dogs', correct: false },
+            { text: 'Brazilian Jaguar', correct: false }
+        ]
+    },
+    {
+        question: "How much was awarded to the winner of the Jupiter Integration track in the 2023 OPOS Hackathon",
+        answers: [
+            { text: '$15,000', correct: false },
+            { text: '$50 Amazon Gift Card', correct: false },
+            { text: '$25,000', correct: false },
+            { text: '$10,000', correct: true }
+        ]
+    },
+    {
+        question: "Who is currently the Top 1% poster on the r/JupiterExchange Subreddit",
+        answers: [
+            { text: 'u/Opacksx', correct: true },
+            { text: 'u/weremeow', correct: false },
+            { text: 'u/xianspacekat', correct: false },
+            { text: 'u/Korey001', correct: false }
+        ]
+    },
+    {
+        question: "Who was the first recipient of the JupDao working group grants",
+        answers: [
+            { text: 'Fabiano.sol X Jussy World', correct: false },
+            { text: 'Organized General', correct: false },
+            { text: 'Doctor Preballin', correct: true },
+            { text: 'DeFiJupJam', correct: false }
+        ]
+    },
+    {
+        question: "Who writes and publishes the JupiterDAO newsletter on X",
+        answers: [
+            { text: 'SaxWeb3', correct: false },
+            { text: 'AG', correct: true },
+            { text: 'SIONG', correct: false },
+            { text: 'ChatGPT', correct: false }
+        ]
+    },
+    {
+        question: "Choose One",
+        answers: [
+            { text: 'PPP', correct: true },
+            { text: 'PVP', correct: false },
         ]
     }
     // Add more questions in the same format
