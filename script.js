@@ -5,6 +5,7 @@ const questionContainerElement = document.getElementById('quiz-questions');
 const progress = document.getElementById('progress')
 const viewResult = document.getElementById('view-results')
 const resultContainer = document.getElementById('results-container')
+const scoreElement = document.getElementById('score-element') 
 
 
 let currentQuestionIndex = 0;
@@ -144,7 +145,9 @@ function showResults() {
     answersElement.innerHTML = '';
     nextButton.classList.add("hidden")
     previousButton.classList.add("hidden")
-    questionElement.textContent = `You answered ${correctAnswers} out of ${questions.length} questions correctly.`;
+    scoreElement.textContent = `You answered ${correctAnswers} out of ${questions.length} questions correctly.`;
+    scoreElement.classList.remove('hidden')
+
     viewResult.classList.remove('hidden')
 }
 
@@ -272,7 +275,7 @@ const questions = [
         question: "Who is currently the Top 1% poster on the r/JupiterExchange Subreddit",
         answers: [
             { text: 'u/Opacksx', correct: true },
-            { text: 'u/weremeow', correct: false },
+            { text: 'u/AremiaVincenzo', correct: false },
             { text: 'u/xianspacekat', correct: false },
             { text: 'u/Korey001', correct: false }
         ]
